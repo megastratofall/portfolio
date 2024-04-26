@@ -14,7 +14,7 @@ let navLinks = document.querySelectorAll('header nav a');
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop -150;
+        let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
         let link = document.querySelector('header nav a[href*=' + id + ']');
@@ -30,15 +30,15 @@ window.onscroll = () => {
         }
     });
 
-/*Sticky navbar-------START-------------------------------------> */
-let header = document.querySelector('header');
+    /*Sticky navbar-------START-------------------------------------> */
+    let header = document.querySelector('header');
 
-header.classList.toggle('sticky', window.scrollY > 100);
+    header.classList.toggle('sticky', window.scrollY > 100);
 
-/* remove toggle icon and navbar when click navbar link (scroll)*/
-menuIcon.classList.remove('bx-x');
-navbar.classList.remove('active');
-/*Sticky navbar-----END-----------------------------------------> */
+    /* remove toggle icon and navbar when click navbar link (scroll)*/
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+    /*Sticky navbar-----END-----------------------------------------> */
 };
 
 /*scroll reveal */
@@ -62,14 +62,14 @@ function validateForm() {
 
     // Verificar que se haya ingresado un correo electrónico válido
     if (!validateEmail(email)) {
-    alert('Por favor, ingrese un correo electrónico válido.');
-    return false;
+        alert('Por favor, ingrese un correo electrónico válido.');
+        return false;
     }
 
     // Verificar que el número de teléfono tenga un formato válido (opcional)
     if (phone !== '' && !validatePhone(phone)) {
-    alert('Por favor, ingrese un número de teléfono válido.');
-    return false;
+        alert('Por favor, ingrese un número de teléfono válido.');
+        return false;
     }
 
     return true;
@@ -123,6 +123,4 @@ async function handleSubmit(e) {
     }
 }
 
-
-/*FORM END------------------------------------------------------------------------------------>*/
-
+/*FORM END------------------------------------------------------------------------------------> */
