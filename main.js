@@ -95,20 +95,34 @@ async function handleSubmit(e) {
     const form = new FormData(this);
     // Agregar el loader al formulario
     $form.appendChild($loader);
-    const response = await fetch(this.action, {
-        method: this.method,
-        body: form,
-        headers: {
-            'Accept': 'application/json'
+    try {
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: form,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        if (response.ok) {
+            this.reset();
+            // Ocultar el loader después de recibir una respuesta del servidor
+            $loader.style.display = 'none';
+            alert('Message sent! I will contact you as soon as possible.');
+        } else {
+            throw new Error('Failed to send message');
         }
-    });
-    if (response.ok) {
-        this.reset();
-        // Ocultar el loader después de recibir una respuesta del servidor
+    } catch (error) {
+        // Mostrar mensaje de error
+        const errorMessage = document.createElement('div');
+        errorMessage.classList.add('error-message');
+        errorMessage.textContent = 'An error occurred while sending the message. Please try again later.';
+        $form.appendChild(errorMessage);
+        // Ocultar el loader en caso de error
         $loader.style.display = 'none';
-        alert('Message sent! I will contact you as soon as possible.');
+        console.error(error);
     }
 }
+
 
 /*FORM END------------------------------------------------------------------------------------>*/
 
