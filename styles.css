@@ -540,3 +540,8 @@ transition: .5s ease;
   margin-top: 1rem;
   text-align: center;
 }
+
+.contact form .input-box input,
+.contact form textarea {
+  color: black;
+}
