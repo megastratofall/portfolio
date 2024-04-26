@@ -533,5 +533,10 @@ transition: .5s ease;
   100% { transform: rotate(360deg); }
 }
 
-
-
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  text-align: center;
+}
