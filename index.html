@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--custom css -->
+  <link rel="stylesheet" href="styles.css">
+  <!--box icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Portfolio</title>
+</head>
+<body>
+
+  <main>
+  
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+
+      <i class='bx bx-menu' id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About me</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact me</a>
+      </nav>
+    </header>
+
+    <!--home start-->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hi, my name is</h3>
+        <h1>Virginia Gutiérrez</h1>
+        <h3>I'm a<span> Full stack web developer</span></h3>
+        <p class="home-p">Passionate about technology and video games.</p>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/virginiaguti%C3%A9rrez/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+          <a href="https://www.instagram.com/megastratofall/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+        </div>
+        <a href="img/CV-VAG.pdf" class="btn" download>Download CV</a>
+
+      </div>
+
+      <div class="home-img">
+        <img src="img/79812512.jpg" alt="perfil-image">
+      </div>
+    </section>
+    <!--home end-->
+
+    <!--about start-->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="img/79812512.jpg" alt="perfil-photo">
+      </div>
+
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <p class="about-p">Since March/2021, I have been professionally engaged in the field of web development, 
+          performing maintenance, creating, and implementing new features for websites, both on the Backend
+          and the Frontend. In my free time, I am also developing a video game using the Unity engine.
+        </p> 
+        <h2 class="skills-h1">Skills & Tools</h2> 
+        <p class="skills-tools"></p>
+          <img src="/img/HTML5.png" alt="html icon"style="height: 64px;">  
+          <img src="/img/CSS.png" alt="css icon"style="height: 64px;">
+          <img src="/img/JS.png" alt="JS icon"style="height: 64px;">
+          <img src="/img/VISUAL STUDIO CODE.png" alt="visual studio icon"style="height: 64px;">
+          <img src="/img/VISUAL STUDIO.png" alt="visual studio icon"style="height: 64px;">
+          <img src="/img/REACT.png" alt="react icon"style="height: 64px;">
+          <img src="/img/VUE.png" alt="vue icon"style="height: 64px;">
+          <img src="/img/BLENDER.png" alt="blender icon"style="height: 64px;">
+          <img src="/img/POSTMAN.png" alt="postman icon"style="height: 64px;">
+          <img src="/img/GITHUB.png" alt="github icon"style="height: 64px;">
+          <img src="/img/UNITY.png" alt="Unity icon" style="height: 64px;">
+          <img src="/img/ANDROID.png" alt="android studio icon" style="height: 64px;">
+          <img src="/img/KOTLIN.png" alt="kotlin icon" style="height: 64px;">
+          <img src="/img/PHP.png" alt="PHP icon" style="height: 64px;">
+          <img src="/img/CODEIGNITER.png" alt="CodeIgniter icon" style="height: 64px;">
+          <img src="/img/NODE.png" alt="Nodejs icon"  style="height: 64px;">
+          <img src="/img/LARAVEL.png" alt="Laravel icon"  style="height: 64px;">
+          <img src="/img/MONGODB.png" alt="MongoDB icon"  style="height: 64px;">
+          <img src="/img/MYSQL.png" alt="Mysql icon"  style="height: 64px;">
+          <img src="/img/sesharp.jpg" alt="c# icon" style="border-radius: 40%; height: 64px;">
+          <img src="/img/PS.png" alt="potoshop icon " style="height: 64px;">
+          <img src="/img/LINUX.png" alt="LINUX icon " style="height: 64px;">
+          <img src="/img/FILEZILLA.png" alt="FILEZILLA icon " style="height: 64px;">
+  
+      </div>
+    </section>
+    <!--about end -->
+
+    <!--portfolio start-->
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">Last <span>projects</span></h2>
+
+      <div class="portfolio-container">
+
+        <div class="portfolio-box">
+          <img src="img/romaweb.jpg" alt="portfolio Roma web">
+            <div class="portfolio-layer">
+              <h4>Web Design</h4>
+              <p>rxoxmxa-art Portfolio</p>
+              <a href="https://rxoxmxa-art.netlify.app/" target="_blank"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="img/blogapp.png" alt="blogapp image">
+            <div class="portfolio-layer">
+              <h4>Blog App</h4>
+              <p>Blog App with React</p>
+              <a href="https://chat-con-react.netlify.app" target="_blank"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+        
+        </div>
+
+    </section>
+    <!--portfolio end-->
+
+    <!--contact start-->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>me</span></h2>
+
+      <form id="form" action="https://formspree.io/f/xyyrlqzw" method="POST" onsubmit="return validateForm()">
+        <div class="input-box">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+        </div>
+        <div class="input-box">
+          <input type="number" placeholder="CellPhone ( optional )">
+          <input type="text" placeholder="Subject" required>
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your message here" required></textarea>
+        <input type="submit" value="Send" class="btn">
+      </form>
+    </section>
+    <!--contact ends-->
+  </main>
+
+  <!-- footer starts-->
+    <footer class="footer">
+      <div class="footer-text">
+        <p></p>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#home"><i class='bx bx-up-arrow-circle'></i></a>
+      </div>
+    </footer>
+  <!-- footer ends-->
+
+  <!--scroll reveal start-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+  <!--scroll reveal ends-->
+
+  <script src="main.js"></script>
+</body>
+</html>
